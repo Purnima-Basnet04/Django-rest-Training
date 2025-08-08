@@ -14,7 +14,7 @@ class IsUserOwnerGetPost(permissions.BasePermission):
         
         return False
     
-    class IsProfileOwnerOrGetPost(permissions.BasePermission):
+class IsProfileOwnerOrGetPost(permissions.BasePermission):
         
         def has_permission(self, request, view):
             return True
