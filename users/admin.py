@@ -6,3 +6,4 @@ class ProfileAdmin(admin.ModelAdmin):
     list_display = ['user', 'address', 'dob']
 
 admin.site.register(Profile, ProfileAdmin)
+admin.site.register(Profile, ProfileAdmin)
