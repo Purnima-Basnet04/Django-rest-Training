@@ -3,11 +3,15 @@ from .serializers import TaskSerializer
 from .models import Task
 from .permissions import*
 from django_filters import filters
+from django_filters import rest_framework as rest_filter
 
 class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
     permission_classes = [IsTaskOwnerOrReadOnly]
-    filter_backends = [filters.orderingFilter]
-    ordering_fields = ['title','created_at','updated_at']
-    filterset_fields = ['status']
+    filter_backends =[filters.OrderingFilter]
+    ordering_fields = ['title','description','start_date','due_date']
+    search_fields=['title','description','status','priority']
+    filterset_fields=['title','priority']
+    
+    
