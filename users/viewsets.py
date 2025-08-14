@@ -9,7 +9,7 @@ class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     permission_classes =[IsUserOwnerGetPost,]
     
-class ProfileViewSet(viewsets.ModelViewSet,mixins.RetrieveModelMixin, mixins.updateModelMixin):
+class ProfileViewSet(viewsets.ModelViewSet,mixins.RetrieveModelMixin, mixins.UpdateModelMixin):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
     permission_classes =[IsProfileOwnerOrGetPost,]
