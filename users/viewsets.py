@@ -13,3 +13,4 @@ class ProfileViewSet(viewsets.ModelViewSet,mixins.RetrieveModelMixin, mixins.Upd
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
     permission_classes =[IsProfileOwnerOrGetPost,]
+    # authentication 
