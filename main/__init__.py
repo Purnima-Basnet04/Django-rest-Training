@@ -1,4 +1,3 @@
-# Default primary key field type
-# Default primary key field type
-# Default primary key field type
-# Default primary key field type
+
+# Internationalization
+# https://docs.djangoproject.com/en/5.2/topics/i18n/
