@@ -16,6 +16,7 @@ class Project(models.Model):
         MEDIUM = 'M', 'Medium'
         HIGH = 'H', 'High'
         
+        
     title = models.CharField(max_length=30)
     description = models.TextField(blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -30,3 +31,4 @@ class Project(models.Model):
     
     def __str__(self):
         return self.title
+    

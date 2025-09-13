@@ -14,6 +14,8 @@ class IsTaskOwnerOrReadOnly(permissions.BasePermission):
        
             
             
+         
+         
           # comment   
         #if not request.user.is_annonymous :
             #return request.user == obj.user
