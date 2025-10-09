@@ -12,11 +12,7 @@ class IsTaskOwnerOrReadOnly(permissions.BasePermission):
         if obj.user == request.user:
             return True
        
-            
-            
-         
-         
-          # comment   
+             # comment   
         #if not request.user.is_annonymous :
             #return request.user == obj.user
             
